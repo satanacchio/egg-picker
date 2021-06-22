@@ -19,14 +19,6 @@ export async function login(browser: Browser) {
     if (await page.url() === LOGIN_URL) {
         throw LOGIN_FAIL;
     }
-    console.info(`${new Date()} - Logged in`);
+    console.info(`${new Date().toLocaleString()} - Logged in`);
     await page.close();
 }
-
-
-
-
-
-
-
-

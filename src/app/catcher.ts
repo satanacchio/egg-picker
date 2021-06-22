@@ -1,5 +1,5 @@
 import { Browser, ElementHandle, Page } from "puppeteer";
-import { OVERBURDENED, TAKEN } from "./constants/util";
+import { CANNOT_BE_FOUND, OVERBURDENED, TAKEN } from "./constants/util";
 
 export async function grab(browser: Browser, page: Page, dragons: Map<string, string>) {
     try {
@@ -21,13 +21,14 @@ export async function grab(browser: Browser, page: Page, dragons: Map<string, st
                 const innerText = await newPage.$eval('p', e => e.innerHTML);
                 switch (innerText) {
                     case OVERBURDENED:
-                        console.error(`${new Date()} - ${OVERBURDENED}`);
+                        console.error(`${new Date().toLocaleString()} - ${OVERBURDENED}`);
                         break;
+                    case CANNOT_BE_FOUND:
                     case TAKEN:
-                        console.info(`${new Date()} - ${TAKEN}`);
+                        console.info(`${new Date().toLocaleString()} - ${TAKEN}`);
                         break;
                     default:
-                        console.info(`${new Date()} - ${dragon} Egg acquired`);
+                        console.info(`${new Date().toLocaleString()} - ${dragon} Egg acquired`);
                         await newPage.screenshot({ path: `${Date.now()}.png` });
                         break;
                 }
@@ -38,4 +39,3 @@ export async function grab(browser: Browser, page: Page, dragons: Map<string, st
         throw error;
     }
 }
-

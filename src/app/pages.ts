@@ -10,7 +10,7 @@ export async function spawnPages(browser: Browser, dragons: Map<string, string>)
                 waitUntil: 'networkidle0',
                 timeout: 0
             });
-            console.info(`${new Date()} - Loaded environment: ${env_name}`);
+            console.info(`${new Date().toLocaleString()} - Loaded environment: ${env_name}`);
             loop(browser, page, dragons);
         }
     } catch (error) {
