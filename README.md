@@ -23,6 +23,5 @@ The application is set by default to pick the rarest eggs, you can change your p
 ]
 ```
 ## License
-
 `Egg-Picker` is available under the MIT license. See the [LICENSE
 file](LICENSE) for details.
