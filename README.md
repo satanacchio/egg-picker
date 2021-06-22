@@ -1,4 +1,4 @@
-# `Egg Picker` -The ultimate Dragon Cave bot!
+# `Egg Picker` - The ultimate Dragon Cave bot!
 ## DISCLAIMER
 This application is for educational purpose only and it does not endorse any form of cheating.
 The use of this application violates Dragon Cave's [terms and conditions](https://dragcave.net/terms).
