@@ -1,0 +1,21 @@
+{
+  "name": "eggpicker",
+  "version": "1.0.0",
+  "description": "A dragon cave bot",
+  "scripts": {
+    "start": "ts-node main.ts"
+  },
+  "author": "Satanacchio",
+  "license": "MIT",
+  "dependencies": {
+    "@types/puppeteer": "^5.4.2",
+    "puppeteer": "^5.5.0",
+    "puppeteer-extra": "^3.1.15",
+    "puppeteer-extra-plugin-adblocker": "^2.11.9"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
