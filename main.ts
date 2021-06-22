@@ -11,7 +11,7 @@ async function main() {
         console.info(`${new Date()} - Start`);
         const dragons: Map<string, string> = readDragons();
         const browser: Browser = await launch();
-        await login(browser, process.env.npm_config_username, process.env.npm_config_password);
+        await login(browser);
         await spawnPages(browser, dragons);
     } catch (error) {
         console.error(`${new Date()} - ${error}`);
